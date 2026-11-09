@@ -1,0 +1,85 @@
+/* Classic jemdoc-style layout */
+body {
+  background: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+a, a > tt { color: #224b8d; text-decoration: none; }
+a:hover { border-bottom: 1px gray dotted; }
+
+table#tlayout { border: none; border-collapse: separate; margin: 0; }
+
+td#layout-menu {
+  vertical-align: top;
+  width: 11em;
+  padding: 20px 20px 8px 8px;
+  background: #f6f6f6;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 90%;
+  white-space: nowrap;
+}
+.menu-category {
+  margin-top: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.1em;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+}
+.menu-item { padding-left: 16px; text-indent: -16px; }
+.menu-item a { display: block; padding: 2px 0 2px 16px; }
+.menu-item a.current { color: #000; background: #ddd; }
+.menu-item a:hover { border-bottom: none; background: #e8e8e8; }
+
+td#layout-content {
+  vertical-align: top;
+  padding: 8px 2em 1em 2em;
+  max-width: 50em;
+  line-height: 1.45;
+}
+
+h1, h2, h3 { font-family: Verdana, Arial, sans-serif; color: #527bbd; }
+h1 {
+  font-size: 165%;
+  margin-top: 0.7em;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid #aaa;
+}
+h2 {
+  font-size: 125%;
+  margin-top: 1.2em;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid #aaa;
+}
+h3 { font-size: 110%; margin-bottom: 0.2em; }
+
+#toptitle h1 { color: #000; border: none; margin-bottom: 0.1em; }
+#subtitle { font-family: Verdana, Arial, sans-serif; font-size: 95%; color: #333; margin-top: 0; }
+
+ul { margin-top: 0.4em; padding-left: 1.6em; }
+li { margin-bottom: 0.45em; }
+li p { margin: 0; }
+
+.note { color: #555; font-size: 92%; }
+.tags { font-family: Verdana, Arial, sans-serif; font-size: 80%; color: #666; }
+tt, code { font-family: "Courier New", monospace; font-size: 95%; }
+
+table.imgtable td { vertical-align: top; padding-right: 1.5em; }
+
+#footer {
+  margin-top: 2.5em;
+  padding-top: 0.4em;
+  border-top: 1px solid silver;
+  font-size: 80%;
+  color: #666;
+}
+#footer a { color: #80a0b0; }
+
+@media (max-width: 700px) {
+  table#tlayout, table#tlayout tbody, table#tlayout tr, td#layout-menu, td#layout-content { display: block; width: auto; }
+  td#layout-menu { padding: 10px; white-space: normal; }
+  .menu-item { display: inline-block; text-indent: 0; padding-left: 0; }
+  .menu-item a { padding: 2px 8px; }
+}

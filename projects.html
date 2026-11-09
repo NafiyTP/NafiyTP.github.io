@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects</title>
+<link rel="stylesheet" href="jemdoc.css">
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Yifan W. Wang</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="cv.pdf">CV (PDF)</a></div>
+<div class="menu-item"><a href="https://www.linkedin.com/in/yifan-wang-99796031b">LinkedIn</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="projects.html" class="current">Projects</a></div>
+<div class="menu-item"><a href="activities.html">Activities</a></div>
+</td>
+<td id="layout-content">
+
+<h1>Projects</h1>
+
+<h2>Research projects</h2>
+<ul>
+<li><p><b>Induction circuits in transformers vs. state-space models.</b> Personal project, 2026.<br>
+Trained a small transformer and a minimal Mamba model (pure PyTorch) on an in-context induction task,
+then localized the circuit with activation patching.
+Both reach similar accuracy (0.854 vs. 0.869). In the transformer the circuit sits in two heads of layer 1;
+in Mamba it is spread over the whole layer, with no single channel necessary or sufficient.
+The hypothesis "slow pole = important channel" did not hold (near-zero correlation).<br>
+<span class="tags">PyTorch &middot; TransformerLens &middot; interpretability</span></p></li>
+
+<li><p><b>RootCause-SLM: log anomaly detection with a small explainer model.</b> Personal project, May-Jul 2026.<br>
+Anomaly detection on HDFS logs with logistic regression on per-block template counts (chronological split),
+also tested on BGL. A Qwen2.5-1.5B model fine-tuned with LoRA (SFT) on teacher annotations explains
+the flagged blocks; it finds the anomaly in about 63% of cases, versus 67% for the teacher.<br>
+<span class="tags">LoRA &middot; SFT &middot; distillation &middot; ROUGE-L / BERTScore</span></p></li>
+
+<li><p><b>SportsAnalytics: pose estimation and time series foundation models.</b> Team project, ongoing.<br>
+Pipeline inspired by Pose2Sim and OpenCap: 2D keypoint extraction with RTMPose, then a time series
+foundation model for movement analysis and performance assessment.<br>
+<span class="tags">pose estimation &middot; time series</span></p></li>
+</ul>
+
+<h2>Engineering and course projects</h2>
+<ul>
+<li><p><b>Secretary-AI.</b> Team project, Mar-Jun 2025.<br>
+Multi-agent system that automates tasks of a medical secretary: appointments, email, prescriptions,
+and voice calls to reschedule. A common interface switches between an external API and local
+inference with Hugging Face Transformers on GPU.</p></li>
+
+<li><p><b>Monte Carlo option pricing engine in C++.</b><br>
+Simulation of Black-Scholes paths from scratch, with variance reduction and a study of convergence error.</p></li>
+
+<li><p><b>Numerical model of the global carbon cycle.</b> Course project, T&eacute;l&eacute;com Paris.<br>
+Euler, Heun, RK4 and Adams-Moulton 3 integrators, with convergence, consistency and stability analysis,
+and climate projections.</p></li>
+</ul>
+
+<div id="footer">
+Page last updated 2026-11-09, in the style of <a href="https://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
